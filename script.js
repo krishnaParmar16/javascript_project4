@@ -22,26 +22,27 @@ function fact()
 
 // fibonacci serice
 
+
 function fibo()
 {
-    let n = document.getElementById("num").value;
-    let ans = f(n);
+    let n=document.getElementById("num").value;
+
+    let first=0;
+    let second=1;
 
 
-    function f(a) {
+        for(let i=1;i<=n-2;i++)
+        {
+        let next=first+second;
 
-            if (a <= 1) {
-                    return a;
-                    
-            }
-            else {
-                    return f(a - 1) + f(a - 2);
-            }
+        first=second;
+        second=next;
+        document.getElementById("ans").value=next;
 
+        }
 
-    }
-    document.getElementById("ans").value= ans;
-
+    
+    
 
 }
 
